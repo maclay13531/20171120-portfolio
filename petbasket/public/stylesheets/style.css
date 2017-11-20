@@ -1,0 +1,141 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+   flex: 1 0 auto;
+}
+
+a {
+  color: #00B7FF;
+}
+
+img {
+	max-width:100%;
+}
+
+.brand-logo {
+	font-family: 'Bree Serif', serif;
+}
+
+h3 {
+
+	font-family: 'Bree Serif', serif;
+	color: #26a69a;
+}
+
+h5 {
+
+	font-family: 'Bree Serif', serif;
+	color: #26a69a;
+}
+h6{
+    color: white;
+    font-size: 24px;
+}
+
+.footer-logo {
+	font-family: 'Bree Serif', serif;
+	font-size: 18px;
+	padding: 0 5px;
+	line-height: 30%;
+}
+
+nav, .brand-logo {
+ 	font-family: 'Bree Serif', serif;
+	color: #26a69a;
+	color: #fff;
+	padding: 0 15px;
+}
+
+nav {
+    color: #fff !important;
+    background-color:  #26a69a !important;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+ }
+.sidenav-profilebox{
+    border: 1px solid #DDDDDD;
+    background: #2FA599
+}
+.register-form{
+    padding: 5%
+}
+.account-update-box{
+    margin-top: 5%; 
+}
+.emailsettings-box{
+    margin-top: 20%
+}
+.profile-img{
+    max-height: 30px;
+    max-width: 30px;
+}
+.side-nav-bar{
+    margin-top: 5%
+}
+.profileimg_navbar{
+    max-height: 30px;
+    max-width: 30px;
+    min-width: 30px;
+    min-width: 30px;
+    margin-top: 16px
+}
+.sidenav-profile-name{
+    text-align: end;
+    margin-top: 32%;
+    font-size: 32px;
+    color: white
+}
+.sidenav-img{
+    margin-top: 7%
+}
+.footer-copyright {
+    overflow: hidden;
+    min-height: 50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px 0px;
+/*    color: rgba(255,255,255,0.8);
+    background-color: rgba(51,51,51,0.08);*/
+    color: #fff !important;
+    background-color:  #26a69a !important;
+}
+.footer-chat{
+    position: absolute;
+    margin-top: -2%;
+    left: 90%
+}
+
+.card-page{
+	height: 300px;
+}
+.card-description{
+	overflow: auto;
+}
+
+.select-wrapper span.caret {
+	margin: 17px 0px;
+}
+
+.text-image-break{
+	margin-top: 150px;
+}
+
+.top-content{
+	margin-top: 10px;
+}
+
+.listings-pet-name{
+	font-family: 'Courgette', cursive;
+}

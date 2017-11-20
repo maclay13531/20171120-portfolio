@@ -1,0 +1,40 @@
+<script>
+	$(document).ready(()=>{
+		$(".dropdown-button").dropdown();
+	});
+</script>
+
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="/profile">Account</a></li>
+  <li><a href="/changePassword">Security</a></li>
+  <li><a href="/emailSettings">Email Settings</a></li>
+  <li><a href="myListings">My Listings</a></li>
+  <li><a href="/logOut">Log Out</a></li>
+</ul> 
+ 
+ <nav>
+    <div class="nav-wrapper">
+      	<a href="/" class="brand-logo"><i class="material-icons right">pets</i>PetBasket</a>
+		<ul id="nav-mobile" class="right hide-on-med-and-down">
+		 <% if (locals.firstNameTest !== undefined){ %>
+		 	<li><a href="/listings">Explore</a></li>
+			<li><a href="/favorites">Favorites<i class="material-icons right">favorite</i></a></li>
+        	<li><a href="/upload">Add Listing<i class="material-icons right">add_to_photos</i></a></li>
+			 <li><a class="dropdown-button" href="#!" data-activates="dropdown1">
+				 <% if (locals.profileimgTest == null){ %>
+                <img src="images/profile_images/blank_profile.jpg" class="circle responsive-img profileimg_navbar">
+            	<% }else{ %>
+                <img src="images/profile_images/<%= locals.profileimgTest %>" class="circle responsive-img profileimg_navbar">
+            	<% } %>
+			 <!-- <img src="images/woman_dogs.jpeg" class="circle responsive-img profileimg_navbar"> -->
+			 	<span><%= locals.firstNameTest %></span>
+			 	<i class="material-icons right center-align">arrow_drop_down</i></a>
+			 </li>
+		<% }else{ %> 
+			<li><a href="/register">Sign Up</a></li>
+			<li><a href="/login">Login</a></li>
+		<% } %>
+		</ul>
+    </div>
+</nav>

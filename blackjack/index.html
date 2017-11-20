@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>BLACKJACK</title>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+
+</head>
+<body>
+
+<!-- 	Layout...
+	1. Create an element for our table
+	2. Make it green
+	3. Give it a border(white)
+	4. Create an element for the dealer's hand
+	5. Create an element for the dealers' total and the player's total
+	6. Create an element inside each hand for each card(max of 6)
+	7. Make a deal, hit, and stand button. -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 the-table">
+				<div class="row">
+					<div class="col-sm-12 dealer-hand-wrapper">
+						<div class="col-sm-6 col-sm-offset-3 total">
+							DEALER TOTAL: <span class="dealer-total">CALCULATING<span>
+						</div>
+						<div class="col-sm-3 future">
+
+						</div>
+						<div class="col-sm-12 dealer-cards">
+							<div class="card card-1 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-2 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-3 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-4 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-5 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-6 col-sm-2"><img src="images/cards/deck.png"></div>
+						</div>
+					</div>
+					<div class="col-sm-12 player-hand-wrapper">
+						<div class="col-sm-6 col-sm-offset-3 total">
+							PLAYER TOTAL: <span class="player-total">CALCULATING<span>
+						</div>
+						<div class="col-sm-3 future">
+
+						</div>
+						<div class="col-sm-12 player-cards">
+							<div class="card card-1 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-2 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-3 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-4 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-5 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-6 col-sm-2"><img src="images/cards/deck.png"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row score">
+					<div class="col-sm-12">
+						<div class="col-sm-4 player-score">
+							PLAYER WIN COUNT: <span class="player-win-count">0</span>
+						</div>
+						<div class="col-sm-4 dealer-score">
+							DEALER WIN COUNT: <span class="dealer-win-count">0</span>
+						</div>
+						<div class="col-sm-4 message">
+							MESSAGE: <span class="check-message"></span>
+						</div>
+					</div>
+				</div>
+				<div class="row text-center">
+					<div class="col-sm-4">
+						<button class="btn btn-primary deal-button">DEAL</button>
+					</div>
+					<div class="col-sm-4">
+						<button class="btn btn-danger hit-button">HIT</button>
+					</div>
+					<div class="col-sm-4">
+						<button class="btn btn-danger stand-button">STAND</button>
+					</div>
+				</div>
+				<div class="row bet">
+					<div class="col-sm-12">
+						<div class="col-sm-4 bet-total">
+							TOTAL CHIP: <span class="player-bet-total">0</span>
+						</div>
+						<div class="col-sm-4">
+							
+						</div>
+						<div class="col-sm-4">
+							
+						</div>
+					</div>
+				</div>
+				<div class="row bet-function text-center">
+					<div class="col-sm-4">
+						<button class="btn btn-warning bet25-button">BET 25</button>
+					</div>
+					<div class="col-sm-4">
+						<button class="btn btn-warning bet50-button">BET 50</button>
+					</div>
+					<div class="col-sm-4">
+						<button class="btn btn-warning bet100-button">BET 100</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="col-sm-6 col-sm-offset-3 text-center">
+			<button class="btn btn-info start-button">START</button>
+		</div>
+		<div class="col-sm-3 game-reset">
+			<button class="btn btn-dark game-reset-button">RESET</button>
+		</div>
+	</div>
+	<div class="container">
+		<div class="col-sm-12 rule">
+			<div class="col-sm-12 rule-text">
+				<ol>
+					<li>WELCOME TO BLACKJACK FOR BEGINNERS.</li>
+					<li>PRESS START TO PLAY THE GAME.</li>
+					<li>YOU CAN ALWAYS RESTART THE GAME BY PRESSING RESET.</li>
+					<li>UNLIKE THE TYPICAL BLACKJACK RULE, YOU ARE ABLE TO SEE THE FIRST TWO CARDS BEFORE BETTING.</li>
+					<li>YOUR STARTING CHIP IS RANDOMIZED TO GIVE YOU A VALUE IN BETWEEN 100 TO 600. (INCREMENTED BY 5)</li>
+					<li>YOU CAN BET 25, 50, OR 100 ONCE PER HAND.</li>
+					<li>YOUR WINNING CONDITION IS TO GET THE TOTAL CHIP VALUE TO 1,000.</li>
+				</ol>
+			</div>	
+		</div>
+	</div>
+
+</body>
+</html>

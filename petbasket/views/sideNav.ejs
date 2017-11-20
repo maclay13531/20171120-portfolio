@@ -1,0 +1,18 @@
+<div class="col s4 side-nav-bar">
+    <div class="col s12 sidenav-profilebox">
+        <div class="col s6">
+            <% if (locals.profileimgTest == null){ %>
+                <img src="images/profile_images/blank_profile.jpg" class="circle responsive-img sidenav-img">
+            <% }else{ %>
+                <img src="images/profile_images/<%= locals.profileimgTest %>" class="circle responsive-img sidenav-img">
+            <% } %>   
+        </div>
+        <div class="col s6 sidenav-profile-name"><%= locals.firstNameTest %></div>
+    </div>
+    <div class="collection">
+        <a href="/profile" class="collection-item">Account</a>
+        <a href="/changePassword" class="collection-item">Security/Password</a>
+        <a href="/emailSettings" class="collection-item">Email Settings/Notifications</a>
+        <a href="/myListings" class="collection-item">My Listings</a>
+    </div>
+</div>

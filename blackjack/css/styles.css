@@ -1,0 +1,103 @@
+.container{
+		perspective: 1200px;
+}
+
+.the-table{
+	/*background-color: #277714;*/
+	background-image: url("../images/board.jpg");
+	background-size: 100% 100%;
+	border: 5px solid yellow;
+	border-radius: 10px 10px 60px 60px;
+	margin-top: 50px;
+	padding: 30px 0px;
+	transform: rotateX(30deg);
+}
+
+.card img{
+	height:100px;
+	display: block;
+	margin: auto;
+	padding-top: 10px;
+}
+
+.dealer-total{
+	font-size: 20px;
+	color: red;
+}
+
+.total{
+	font-size: 20px;
+	background-color: yellow;
+	color: black;
+	width: 40%;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.player-total{
+	font-size: 20px;
+	color: blue;
+}
+
+.score, .bet-total{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.player-score, .dealer-score, .bet-total, .message{
+	font-size: 15px;
+	color: white;
+	font-weight: bold;
+}
+
+.player-win-count{
+	color: blue;
+	font-weight: bold;
+}
+
+.dealer-win-count{
+	color: red;
+	font-weight: bold;
+}
+
+.check-message{
+	color: yellow;
+	font-weight: bold;
+}
+
+.bet-function{
+	margin-top: 20px;
+}
+
+.player-bet-total{
+	color: yellow;
+}
+
+.start-button, .game-reset-button{
+	width: 60%;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.rule{
+	background-color: #277714;
+	border: 5px solid yellow;
+	border-radius: 60px 60px 10px 10px;
+	padding: 5px;
+	margin-top: 10px;
+	color: yellow;
+	font-size: 15px;
+	background-image: url("../images/board1.jpg");
+	background-size: 100% 100%;
+}
+
+ol{
+	margin-top: 20px;
+}
+
+
+
+
+

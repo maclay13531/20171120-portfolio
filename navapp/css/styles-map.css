@@ -1,0 +1,89 @@
+.point-a{
+	background-color: green;
+}
+.point-b{
+	background-color: red;
+}
+#map{
+	height: 90vh;
+	position: relative
+}
+#info-box{
+	/* overflow: scroll; */
+	height: auto;
+	max-height: 80vh;
+	overflow: auto;	
+}
+.nav{
+	margin-bottom: -20px;
+}
+.navapp-navbar{
+	/*background: rgba(41, 40, 39, 0.5)*/
+	background: rgb(66, 124, 248);
+	box-shadow: -1px 5px 18px 0px rgba(0,0,0,0.75);
+}
+.nav-right, .nav-left{
+	display: hidden
+}
+.nav-right{
+	margin-top: 25px;
+}
+#log-in, #sign-up{
+	color: white;
+	font-weight: bold;
+}
+.nav-logo{
+	color: rgb(40, 40, 158);
+	font-family: 'Fascinate Inline', cursive;
+	/* text-shadow: 5px 5px 3px rgba(118, 132, 150, 1); */
+}
+.a-logo{
+	color: red
+}
+.p-logo{
+	color: rgb(245, 245, 45)
+}
+.p2-logo{
+	color: lightgreen
+}
+.weather-box{
+	position: absolute;
+	margin-left: 101%;
+	margin-top: 15%;
+	z-index: 5;
+	background: rgba(21, 39, 119, 0.377);
+	color: white;
+	border-radius: 3%;
+	font-size: 11px;
+	/* max-height: 150px; */
+	overflow: auto;
+}
+.weather-start, .weather-end{
+	background: rgba(236, 234, 234,0.9);
+	margin-bottom: 5%;
+	max-height: 100%;
+	color: black;
+	border-radius: 3%;
+}
+.icon-start, .icon-end{
+	position: absolute;
+	margin-left: 25%
+}
+
+
+/* add a loading image while waiting for api request */
+.loader {
+    border: 6px solid #f3f3f3; /* Light grey */
+    border-top: 6px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+	animation: spin 2s linear infinite;
+	margin-left: 130px;
+	
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

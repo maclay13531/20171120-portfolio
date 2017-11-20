@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>NavAPP</title>
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Courgette|Fascinate+Inline|Indie+Flower|Pacifico|Rubik" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1TSCiV6L80P0PdYJ0QuYEdLKBpr-AgUk&callback=mapfunction&libraries=places" async defer></script>
+
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="js/scripts.js"></script>
+
+</head>
+<body>
+	<!-- Modal -->
+	<div class="modal fade" id="myModalLogIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabelLogIn">Log In</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<input type="email" class="form-control name-input" placeholder="email or ID">
+							<br> <!-- change to css later -->  
+						<input type="password" class="form-control password-input" placeholder="password">
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal fade" id="myModalSignIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabelSignUp">Sign Up</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<input type="email" class="form-control name-input" placeholder="email or ID">
+							<br> <!-- change to css later -->  
+						<input type="password" class="form-control password-input" placeholder="password">
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid front-page">
+		<!-- ========= Nav Start ==============	 -->
+		<!-- <video autoplay loop muted poster="roadtrip.jpeg" id="background"> -->
+			<!-- <source src="videos/backgroundVideo.mp4" type="video/mp4"> -->
+		<!-- </video> -->
+		<!-- === video Start ====-->
+		<div class="video-background">
+			<div class="video-foreground">
+				<video src="videos/backgroundVideo.mp4" frameborder="0" allowfullscreen autoplay loop></video>
+			</div>
+		</div>
+ 		<!-- === video end ====-->
+		<div class="row">	
+			<nav class="navbar navbar-fixed-top sticky navbar-light bg-faded navapp-navbar" role="navigation">
+				<div class="col-sm-4 nav-left">
+					<div class="row">
+						<div class="col-xs-6 col-sm-3">
+							<a class="navbar-brand" href="index.html">
+								<img src="images/icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
+							</a>
+						</div>
+						<div class="col-xs-6 col-sm-9">
+							<h3>
+								<span class="nav-logo">Nav</span><span class="a-logo">A</span><span class="p-logo">P</span><span class="p2-logo">P</span>
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-offset-3 col-sm-5 nav-right">
+					<div class="row text-center">
+							<!-- About Section -->
+						<div class="col-sm-2 col-xs-6 nav-item">
+							<a href="#about">ABOUT</a>
+						</div>
+							<!-- About Section End -->
+						<div class="col-sm-4 col-xs-6 nav-item">
+							<a href="#popular-trip">POPULAR TRIPS</a>
+						</div>
+						<div class="col-sm-3 col-xs-6 nav-item">
+							<a href="#" id="log-in">LOG IN</a>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+							<a href="#" id="sign-up" >SIGN UP</a>
+						</div>
+					</div>
+				</div>
+			</nav>		
+		</div>
+<!-- ============= Nav Bar END / MAIN CONTENT START =============  -->
+		<div class="row body-content">
+			<div class="col-sm-12 text-center">
+				<h1 id="header-navapp"><span class="nav-logo">Nav</span><span class="a-logo">A</span><span class="p-logo">P</span><span class="p2-logo">P</span></h1>
+			</div>
+			<div class ="col-sm-offset-3 col-sm-6 text-center" id="search-title">
+				<h3>Search Your Vacation!</h3>
+			</div>
+			<form class="search-form">
+				<div class="col-sm-offset-2 col-sm-4 ">
+					<input class="form-control start-location" id="autocomplete" placeholder="Enter your start address"
+					 type="text">
+				</div>
+				<div class="col-sm-4 ">
+					<input class="form-control end-location" id="autocomplete-end" placeholder="Enter your end address"
+					 type="text">
+				</div>
+				<div class="col-sm-2 ">
+					<div class="col-sm-6 col-xs-6 text-center">
+						<button class="btn btn-success btn-lg" id="add-button">+</button>
+					</div>
+					<div class="col-sm-6 col-xs-6 search-link">
+						<a href="map.html" target="blank" class="btn btn-primary btn-lg" id="go-button">GO!</a>
+						<!-- <button type="submit" class="btn btn-block btn-primary">GO!</button> -->
+					</div>
+				</div>
+			</form>
+		</div>
+		<!-- <div class="col-sm-12 text-center down-arrow"><span class="glyphicon glyphicon-menu-down"></span></div> -->
+	</div> <!-- front page div end  -->
+	
+<!-- ============== MAIN CONTENT END / ABOUT PAGE START ========== -->
+	
+	<div class="container-fluid about-container">
+		<!-- <div class="row">
+			<div class="col-sm-12 text-center" id="about">			
+				<h2>About</h2>		
+			</div>
+		</div> -->
+		<div class="row" id="about">
+				<h2 class="text-center about-heading">About</h2>
+			<div class="col-xs-12 about-boxes text-center">
+				<div class="col-xs-12 col-sm-2 about-block1">
+					<img src="images/glass.png" class="page-two-image">
+					<h3>Research Destinations</h3>	
+				</div>
+				<div class="col-sm-offset-1 col-sm-2 col-xs-12 about-block2">
+					<img src="images/map-marker.png" class="page-two-image">
+					<h3>Map Trip Destinations</h3>
+				</div>
+				<div class="col-sm-offset-1 col-sm-2 col-xs-12 about-block3">
+					<img src="images/food.png" class="page-two-image">
+					<h3>Find Nearby Restaurants</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- ============== About END / POPULAR TRIP START ========== -->	
+	<div class="container-fluid trip-container" id="popular-trip">
+		<!-- <div class="row">
+				<div class="col-sm-12 text-center" id="popular-trip">			
+				<h2>Popular Trips</h2>				
+				</div>
+		</div> -->
+		<!-- ==== Trip Carousel Object === -->
+		<h2 class="text-center popular-trips-heading">Popular Trips</h2>	
+		<div id="myCarousel" class="carousel slide trip-carousel text-center" data-ride="carousel">
+			<!-- Carousel indicators -->
+			<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>   
+			<!-- Wrapper for carousel items -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="images/trip1map.png" alt="First Slide">
+					<div class="carousel-caption d-none d-md-block">
+						<h3>Ultimate Roadtrip</h3>
+						<!-- <p>The ultimate roadtrip was designed by 
+							<a href="https://rhiever.github.io/optimal-roadtrip-usa/major-landmarks.html">Randy Olson</a> 
+								and mapped with the following criteria:<br>1. The trip must make at least one stop in all 48 states in the contiguous U.S.<br>2. The trip would only make stops at National Natural Landmarks, National Historic Sites, National Parks, or National Monuments.<br>3. The trip must be taken by car and never leave the U.S.
+						</p> -->
+					</div>
+				</div>
+				<div class="item">
+					<img src="images/big-sur.jpeg" alt="Second Slide">
+					<div class="carousel-caption d-none d-md-block">
+						<h3>Pacific Coast (Big Sur)</h3>
+						<!-- <p>...</p> -->
+					</div>
+				</div>
+				<div class="item">
+					<img src="images/route66.jpeg" alt="Third Slide">
+					<div class="carousel-caption d-none d-md-block">
+						<h3>Route 66 (ILLINOIS TO CALIFORNIA)</h3>
+						<!-- <p>...</p> -->
+					</div>
+				</div>
+			</div>
+			<!-- Carousel controls -->
+			<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="carousel-control right" href="#myCarousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div>	
+	</div>
+
+	<!-- Footer Start	 -->
+	<footer class="footer">
+		<div class="col-sm-1 footer-names">
+			Jason Li
+		</div>
+		<div class="col-sm-1 footer-names">
+			Jong Park
+		</div>
+		<div class="col-sm-2 footer-names">
+			Binh Chung
+		</div>
+		<div class="col-sm-offset-4 col-sm-4">
+			<a id="github-icon" href="https://github.com/2monsta/FrontEndProject">
+				<img src="images/github.png" height="55" width="150" alt="">
+			</a>
+		</div>
+	</footer>
+	<!-- Footer End -->
+		
+	<!-- Skrollr
+	<script type="text/javascript" src="/skrollr/skrollr.min.js"></script>
+	<script type="text/javascript">
+	var s = skrollr.init();
+	</script> -->
+</body>
+</html>

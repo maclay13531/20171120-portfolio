@@ -1,0 +1,223 @@
+/* .front-page{
+	animation: flip-page 2s linear 1s forwards;
+} */
+/* .front-page.animateMe{
+	animation: flip-page 2s linear 1s forwards;
+} */
+
+#background{
+	z-index: -1
+}
+.container-fluid{
+	height: 100vh;
+	overflow-x: hidden;
+}
+.front-page-content{
+	background-position: fixed;
+}
+h2{
+	font-family: 'Baloo Chettan', cursive;
+}
+/* ===== NavBar ===== */
+#header-navapp{
+	font-size: 4em;
+	font-family: 'Fascinate Inline', cursive;
+}
+.navapp-navbar{
+	background: rgb(66, 124, 248);
+	box-shadow: -1px 5px 18px 0px rgba(0,0,0,0.75);
+}
+a{
+	color: white;
+	text-decoration: none
+}
+.nav-right{
+	margin-top: 25px;
+	font-weight: bold
+}
+.nav-logo{
+	color: rgb(40, 40, 158);
+	font-family: 'Fascinate Inline', cursive;
+	/* text-shadow: 5px 5px 3px rgba(118, 132, 150, 1); */
+}
+.a-logo{
+	color: red
+}
+.p-logo{
+	color: rgb(245, 245, 45)
+}
+.p2-logo{
+	color: lightgreen
+}
+/* .down-arrow{
+	float: bottom
+} */
+/* ===== Nav Bar END/ BODY START ====== */
+
+.body-content{
+	margin-top: 100px
+}
+#search-title{
+	margin-bottom: 50px;
+	font-family: 'Courgette', cursive;
+	letter-spacing: .6em;
+}
+.start-location, .end-location{
+	height: 46px;
+	box-shadow: -30px 28px 25px -27px rgba(0,0,0,0.75);
+	filter: opacity(.8)
+}
+   /* About Section */
+.about-container{
+	/* background-color:orange; */
+	background: url('http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/roadtrip0616_0.jpg?itok=XFlFiCLw') fixed;
+	background-size: cover;
+	opacity: 0;
+	margin-top: 70px;
+	/* backdrop-filter: blur(10px) */
+}
+.about-container.animateMe{
+	animation: Fade .5s linear 1s forwards;
+}
+@keyframes Fade {
+	0% {opacity: 0;}
+	/* 25% {opacity: 0.25;} */
+	50% {opacity: 0.5;}
+	/* 75% {opacity: 0.75;} */
+	100% {opacity: 1;}
+}
+@keyframes flip-page{
+	from{
+		transform: translateY(0)
+	}
+	to {
+		transform: translateY(-100%)
+	}
+}
+.trip-container{
+	background: url('https://www.timetravelturtle.com/wp-content/uploads/2016/03/Victoria-2016-478_new.jpg') fixed;
+	/* background: url('../images/rocks.jpeg'); */
+	background-size: cover;
+	/*filter: blur(5px);*/
+	border-top: 25px solid black;
+	/* background: rgb(90, 168, 101); */
+	position: relative;
+	opacity: 0;
+}
+.trip-container.animateMe{
+	animation: Fade 4s linear 1s forwards;
+}
+h3{
+	/* color: white; */
+	font-weight: bold
+}
+/* #about, #popular-trip{
+	height: 63px;
+	background-color: white 
+} */
+.about-heading{
+	margin-top: 5%;
+	text-decoration: underline;
+	color: black;
+}
+.popular-trips-heading{
+	margin-top: 2%;
+	text-decoration: underline;
+	color: black;
+}
+.about-block1, .about-block2, .about-block3{
+
+	background:	rgba(255,255,224,0.5);
+	padding: 50px;
+	border-radius: 15%
+}
+
+.about-boxes{
+	margin-left: 15%;
+	height: 80%;
+	margin-top: 6%;
+}
+ /* Popular Trip Section */
+.page-two-image{
+	width: 100%;
+}
+.trip-carousel{
+	margin-top: 3%;
+	overflow: hidden;
+	box-shadow: 1px -3px 16px -2px rgba(0,0,0,0.75);
+	height: 80vh;
+	/* position: absolute */
+}
+.item >img{
+	margin: auto
+}
+p{
+	text-align: left;
+	margin: 5%
+}
+
+/* ==== BODY END ===== */
+
+footer{
+	background:green;
+	height: 50px;
+}
+footer >a{
+	margin-left: 45%
+}
+#github-icon{
+	float: right;
+}
+.footer-names{
+	margin-top: 15px;
+}
+
+
+/* ===== Front Page Video ====  */
+* { box-sizing: border-box; }
+.video-background {
+  background: #000;
+  /* position: fixed; */
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+  /* opacity: .5; */
+  /* filter: blur(4px); */
+}
+.video-foreground,
+.video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+#vidtop-content {
+	top: 0;
+	color: #fff;
+}
+.vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
+.vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+@media all and (max-width: 600px) {
+.vid-info { width: 50%; padding: .5rem; }
+.vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+.vid-info .acronym { display: none; }
+}
+.panel{
+	max-height: 500px;
+	overflow-y: scroll;
+}
+
+.carousel-inner img{
+	margin-top: 30px;
+}
